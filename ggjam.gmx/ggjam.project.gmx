@@ -12,7 +12,9 @@
     <sprite>sprites\sLightWall</sprite>
     <sprite>sprites\sEnemy</sprite>
   </sprites>
-  <backgrounds name="background"/>
+  <backgrounds name="background">
+    <background>background\bgWow</background>
+  </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
     <script>scripts\moveContactWith.gml</script>
