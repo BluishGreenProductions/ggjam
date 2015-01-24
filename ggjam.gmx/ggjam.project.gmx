@@ -30,7 +30,8 @@
     <room>rooms\rmtest</room>
     <room>rooms\room0</room>
   </rooms>
-  <constants number="3">
+  <constants number="4">
+    <constant name="Unmapped">-1</constant>
     <constant name="TypePC">0</constant>
     <constant name="TypeJoystick">2</constant>
     <constant name="TypeGamepad">1</constant>
