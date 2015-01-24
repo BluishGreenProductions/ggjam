@@ -25,8 +25,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>limit = 5;
-
+            <string>moveSpeed = 5;
+onIce = false;
 transitioning = false;
 </string>
           </argument>
@@ -53,45 +53,39 @@ transitioning = false;
             <string>var Dir = input360();
     //Movement
     if (Dir == 180 || Dir == 135 || Dir == 225 || (onIce &amp;&amp; dirSlip == 180)) {
-        if (!place_meeting(x - moveSpeed, y, oWall))
+        if (!place_meeting(x - moveSpeed, y, parWall))
             x -= moveSpeed;
         else
-            moveContactWith(180, moveSpeed, oWall);
+            moveContactWith(180, moveSpeed, parWall);
         dirSlip = 180;
-        myDirection = Left;
     }
     if (Dir == 45 || Dir == 0 || Dir == 315 || (onIce &amp;&amp; dirSlip == 0)) {
-        if (!place_meeting(x + moveSpeed, y, oWall))
+        if (!place_meeting(x + moveSpeed, y, parWall))
             x += moveSpeed;
         else
-            moveContactWith(0, moveSpeed, oWall);
+            moveContactWith(0, moveSpeed, parWall);
         dirSlip = 0;
-        myDirection = Right;
     }
     if (Dir == 90 || Dir == 45 || Dir == 135 || (onIce &amp;&amp; dirSlip == 90)) {
-        if (!place_meeting(x, y - moveSpeed, oWall))
+        if (!place_meeting(x, y - moveSpeed, parWall))
             y -= moveSpeed;
         else
-            moveContactWith(90, moveSpeed, oWall);
-        dirSlip = 90;
-        myDirection = Up;
+            moveContactWith(90, moveSpeed, parWall);
     }
     if (Dir == 225 || Dir == 270 || Dir == 315 || (onIce &amp;&amp; dirSlip == 270)) {
-        if (!place_meeting(x, y + moveSpeed, oWall))
+        if (!place_meeting(x, y + moveSpeed, parWall))
             y += moveSpeed;
         else
-            moveContactWith(270, moveSpeed, oWall);
+            moveContactWith(270, moveSpeed, parWall);
         dirSlip = 270;
-        myDirection = Down;
     }
-    moveSpeed = MoveSpeed;
     onIce = false;
 </string>
           </argument>
         </arguments>
       </action>
     </event>
-    <event eventtype="4" ename="oWall">
+    <event eventtype="4" ename="parWall">
       <action>
         <libid>1</libid>
         <id>603</id>

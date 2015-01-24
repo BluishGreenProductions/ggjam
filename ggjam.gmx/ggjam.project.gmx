@@ -25,11 +25,13 @@
     <object>objects\oPlayer</object>
     <object>objects\oTransitioner</object>
     <object>objects\oGC</object>
-    <object>objects\oWall</object>
+    <object>objects\parWall</object>
+    <object>objects\parDark</object>
+    <object>objects\parLight</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rmtest</room>
-    <room>rooms\room0</room>
+    <room>rooms\rmtest</room>
   </rooms>
   <constants number="4">
     <constant name="Unmapped">-1</constant>
