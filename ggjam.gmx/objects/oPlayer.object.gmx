@@ -25,7 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>move_speed = 5;
+            <string>limit = 5;
 
 transitioning = false;
 </string>
@@ -50,8 +50,9 @@ transitioning = false;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>hspeed = (inputLeft() - inputRight()) * move_speed;
-vspeed = (inputDown() - inputUp()) * move_speed;
+            <string>motion_add(input360(), 0.1);
+
+speed = min(-limit, max(limit, speed));
 </string>
           </argument>
         </arguments>
@@ -74,7 +75,7 @@ vspeed = (inputDown() - inputUp()) * move_speed;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>moveContactWith(direction,1,other);
+            <string>moveContactWith(direction, 1, other);
 </string>
           </argument>
         </arguments>

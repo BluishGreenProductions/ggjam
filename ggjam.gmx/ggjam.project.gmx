@@ -26,9 +26,14 @@
     <object>objects\oWall</object>
   </objects>
   <rooms name="rooms">
-    <room>rooms\room0</room>
     <room>rooms\rmtest</room>
+    <room>rooms\room0</room>
   </rooms>
+  <constants number="3">
+    <constant name="TypePC">0</constant>
+    <constant name="TypeJoystick">2</constant>
+    <constant name="TypeGamepad">1</constant>
+  </constants>
   <help>
     <rtf>help.rtf</rtf>
   </help>
