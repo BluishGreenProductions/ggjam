@@ -27,15 +27,17 @@
   <objects name="objects">
     <object>objects\oPlayer</object>
     <object>objects\oTransitioner</object>
+    <object>objects\oEnemy</object>
     <object>objects\oGC</object>
     <object>objects\parWall</object>
     <object>objects\parDark</object>
     <object>objects\parLight</object>
     <object>objects\oWallDark</object>
     <object>objects\oWallLight</object>
-    <object>objects\oEnemy</object>
+    <object>objects\oExit</object>
   </objects>
   <rooms name="rooms">
+    <room>rooms\rm_level1</room>
     <room>rooms\room1</room>
   </rooms>
   <constants number="6">

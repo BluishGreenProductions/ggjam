@@ -104,23 +104,19 @@ clearGrid = true;
     if visibleMode == MODE_LIGHT {
         instance_deactivate_object(parDark);
         instance_activate_object(parLight);
-        show_debug_message("change to light");        
     }
     else if visibleMode == MODE_DARK {
         instance_deactivate_object(parLight);
         instance_activate_object(parDark);
-        show_debug_message("change to dark");        
     }
 
     mp_grid_add_instances(oGC.grid, parWall, true);    
-    //clearGrid = false;
+    clearGrid = false;
 
 }    
-/*draw_set_alpha(0.3);
+draw_set_alpha(0.3);
 mp_grid_draw(oGC.grid);
-draw_set_alpha(1);*/
-
-show_debug_message(visibleMode);
+draw_set_alpha(1);
 </string>
           </argument>
         </arguments>
