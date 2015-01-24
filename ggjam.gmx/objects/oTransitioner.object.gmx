@@ -51,14 +51,18 @@ size = 0;
           <argument>
             <kind>1</kind>
             <string>draw_self();
+
 if transitioning and fade == -1 {
     draw_set_color(c_white);
     draw_circle(x, y, size, false);
     size = lerp(size, room_width * 2, 0.04);    
     if(size &gt;= room_width) {
+        show_debug_message(oGC.visibleMode);
         oGC.visibleMode = !oGC.visibleMode;
+        show_debug_message(oGC.visibleMode);
         size = 0;
         transitioning = false;
+        show_debug_message("transitioning false");
         fade = 1;
     }
 }

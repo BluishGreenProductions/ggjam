@@ -51,16 +51,46 @@ oldPlayerY = oPlayer.y;
         <arguments>
           <argument>
             <kind>1</kind>
+            <string>event_perform(ev_other, ev_user0);
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="7" enumb="10">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
             <string>//has the character moved?  if so, chase!
 if (abs(oPlayer.x - oldPlayerX) &gt; 20 
-|| abs(oPlayer.y - oldPlayerY) &gt; 20)
+|| abs(oPlayer.y - oldPlayerY) &gt; 20
+|| oGC.resetGrid )
 {
     oldPlayerX = oPlayer.x;
     oldPlayerY = oPlayer.y;
     
     path_delete(path);
     path = path_add();
-    
+ 
+    if (oGC.resetGrid)
+    {
+        oGC.resetGrid = false;
+        show_debug_message("step transitioning");
+    }
+       
     if mp_grid_path(oGC.grid, path, x, y, oldPlayerX, oldPlayerY, true) {
         path_start(path, 3, 3, 1);
     }

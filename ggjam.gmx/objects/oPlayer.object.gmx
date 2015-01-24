@@ -105,6 +105,11 @@ transitioning = false;
             <kind>1</kind>
             <string>if keyboard_check_released(vk_space) {
     other.transitioning = true;
+    with(oGC){
+        event_perform(ev_other, ev_user0);
+    }
+    //other.transitioning = false;
+    show_debug_message("space released");
 }
 </string>
           </argument>
