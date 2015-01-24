@@ -17,6 +17,7 @@
     <script>scripts\inputRight.gml</script>
     <script>scripts\inputCompact.gml</script>
     <script>scripts\inputJump.gml</script>
+    <script>scripts\input360.gml</script>
   </scripts>
   <objects name="objects">
     <object>objects\oPlayer</object>
