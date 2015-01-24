@@ -37,8 +37,10 @@
     <object>objects\oWallDark</object>
     <object>objects\oWallLight</object>
     <object>objects\oExit</object>
+    <object>objects\oWallBoth</object>
   </objects>
   <rooms name="rooms">
+    <room>rooms\rmMaze</room>
     <room>rooms\rm_level1</room>
     <room>rooms\room1</room>
   </rooms>
