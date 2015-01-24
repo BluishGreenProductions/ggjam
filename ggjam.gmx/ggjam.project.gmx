@@ -40,9 +40,9 @@
     <object>objects\oWallBoth</object>
   </objects>
   <rooms name="rooms">
-    <room>rooms\rmMaze</room>
     <room>rooms\rm_level1</room>
     <room>rooms\room1</room>
+    <room>rooms\rmMaze</room>
   </rooms>
   <constants number="6">
     <constant name="MODE_DARK">1</constant>

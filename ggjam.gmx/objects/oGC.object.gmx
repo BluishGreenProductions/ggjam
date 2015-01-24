@@ -39,6 +39,32 @@ visibleMode = MODE_LIGHT;
 grid = mp_grid_create(16, 16, room_width /32, room_height /32, 32, 32);
 
 gridInitialized = false;
+alarm[1] = 1;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="1">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/*instance_activate_object(parDarkSolid);
+
+mp_grid_add_instances(grid, parWall, false);*/
 </string>
           </argument>
         </arguments>
@@ -107,11 +133,15 @@ if visibleMode == MODE_LIGHT {
     instance_deactivate_object(parLightSolid);
     instance_activate_object(parDark);
     instance_activate_object(parDarkSolid);
+    if (gridInitialized)
+    {
+        mp_grid_clear_all(grid);
+        mp_grid_add_instances(grid, parWall, 1);
+        gridInitialized = true;
+    }
+
 }
 resetGrid = true;
-with(oEnemy){
-    event_perform(ev_other, ev_user0);
-}
 </string>
           </argument>
         </arguments>
@@ -134,11 +164,7 @@ with(oEnemy){
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//if visibleMode == MODE_DARK and not gridInitialized {
-    event_perform(ev_other, ev_user0);
-    mp_grid_add_instances(grid, parWall, false);
-    gridInitialized = true;
-//}
+            <string>event_perform(ev_other, ev_user0);
 </string>
           </argument>
         </arguments>
