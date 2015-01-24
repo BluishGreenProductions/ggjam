@@ -29,6 +29,13 @@
 onIce = false;
 transitioning = false;
 ang = 0;
+
+platforming = false;
+
+// Platforming
+grav = 0;
+vspd = 0;
+hspd = 0;
 </string>
           </argument>
         </arguments>
@@ -52,6 +59,7 @@ ang = 0;
           <argument>
             <kind>1</kind>
             <string>var Dir = input360();
+if not platforming {
 //Movement
 if (Dir == 180 || Dir == 135 || Dir == 225 || (onIce &amp;&amp; dirSlip == 180)) {
     if (!place_meeting(x - moveSpeed, y, parWall))
@@ -82,6 +90,11 @@ if (Dir == 225 || Dir == 270 || Dir == 315 || (onIce &amp;&amp; dirSlip == 270))
     dirSlip = 270;
 }
 onIce = false;
+}
+
+else { // platforming code ay
+    
+}
     
 // fixups
 if x != xstart {
@@ -104,21 +117,6 @@ if Dir != -1 {
 }
 
 image_speed = (Dir != -1) * 0.5;
-
-/*
-// wrap at edges smoothly
-if x &gt; room_width - view_wview[0] / 2 {
-    x = view_wview[0] / 2 + 16;
-} else if x &lt; view_wview[0] / 2 {
-    x = room_width - view_wview[0]/2 - 16;
-}
-
-if y &gt; room_height - view_hview[0]/2 {
-    y = view_hview[0]/2 + 16;
-} else if y &lt; view_hview[0]/2 {
-    y = room_height - view_hview[0]/2 - 16;
-}
-*/
 </string>
           </argument>
         </arguments>
