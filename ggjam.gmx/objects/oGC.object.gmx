@@ -34,7 +34,7 @@ if(os_type == os_android) {
     gpDevice = 0;
 }
 
-visibleMode = MODE_LIGHT;
+visibleMode = MODE_DARK;
 </string>
           </argument>
         </arguments>
@@ -99,8 +99,9 @@ visibleMode = MODE_LIGHT;
 
 if visibleMode == MODE_LIGHT {
     instance_activate_object(parDark);
-    instance_activate_object(parLight);
+    instance_deactivate_object(parLight);
 }
+
 </string>
           </argument>
         </arguments>
