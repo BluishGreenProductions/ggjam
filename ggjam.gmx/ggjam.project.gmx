@@ -11,6 +11,9 @@
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
+  <scripts name="scripts">
+    <script>scripts\moveContactWith.gml</script>
+  </scripts>
   <objects name="objects">
     <object>objects\oPlayer</object>
     <object>objects\oTransitioner</object>
