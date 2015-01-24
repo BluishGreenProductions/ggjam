@@ -39,6 +39,9 @@ visibleMode = MODE_LIGHT;
 grid = mp_grid_create(16, 16, room_width /32, room_height /32, 32, 32);
 
 gridInitialized = false;
+
+x_offset = 0;
+y_offset = 0;
 </string>
           </argument>
         </arguments>
@@ -74,6 +77,30 @@ gridInitialized = false;
         alarm[0] = room_speed;
     }
 }
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="3" enumb="1">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>//x_offset = 0;
+//y_offset = 0;
 </string>
           </argument>
         </arguments>
@@ -167,6 +194,7 @@ draw_line(0,room_height - view_hview[0]/2, room_width, room_height - view_hview[
 
 draw_line(view_wview[0]/2, 0, view_wview[0]/2, room_height);
 draw_line(room_width - view_wview[0]/2, 0, room_width - view_wview[0]/2, room_height);
+
 </string>
           </argument>
         </arguments>

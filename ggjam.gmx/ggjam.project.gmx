@@ -38,6 +38,7 @@
     <object>objects\oWallLight</object>
     <object>objects\oExit</object>
     <object>objects\oWallBoth</object>
+    <object>objects\parMovesWithView</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rmMaze</room>

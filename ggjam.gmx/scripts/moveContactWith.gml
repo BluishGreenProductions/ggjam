@@ -20,8 +20,8 @@ show_debug_message("move");
         var i = instance_place( x + dx, y + dy, contact_obj );
         if( i != noone and i.visible)
             return true;
-        x = x + dx;
-        y = y + dy;
+        x += dx;
+        y += dy;
         dist = dist + 1;
     }   
    
