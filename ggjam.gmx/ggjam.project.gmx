@@ -13,6 +13,10 @@
   <paths name="paths"/>
   <scripts name="scripts">
     <script>scripts\moveContactWith.gml</script>
+    <script>scripts\inputLeft.gml</script>
+    <script>scripts\inputRight.gml</script>
+    <script>scripts\inputCompact.gml</script>
+    <script>scripts\inputJump.gml</script>
   </scripts>
   <objects name="objects">
     <object>objects\oPlayer</object>
