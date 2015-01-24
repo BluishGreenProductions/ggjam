@@ -14,8 +14,6 @@
   <scripts name="scripts">
     <script>scripts\moveContactWith.gml</script>
     <script>scripts\inputLeft.gml</script>
-    <script>scripts\inputUp.gml</script>
-    <script>scripts\inputDown.gml</script>
     <script>scripts\inputRight.gml</script>
     <script>scripts\inputCompact.gml</script>
     <script>scripts\inputJump.gml</script>
@@ -28,6 +26,7 @@
   </objects>
   <rooms name="rooms">
     <room>rooms\room0</room>
+    <room>rooms\rmtest</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
