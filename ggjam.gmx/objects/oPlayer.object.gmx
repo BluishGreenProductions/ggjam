@@ -50,9 +50,42 @@ transitioning = false;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>motion_add(input360(), 0.1);
-
-speed = min(-limit, max(limit, speed));
+            <string>var Dir = input360();
+    //Movement
+    if (Dir == 180 || Dir == 135 || Dir == 225 || (onIce &amp;&amp; dirSlip == 180)) {
+        if (!place_meeting(x - moveSpeed, y, oWall))
+            x -= moveSpeed;
+        else
+            moveContactWith(180, moveSpeed, oWall);
+        dirSlip = 180;
+        myDirection = Left;
+    }
+    if (Dir == 45 || Dir == 0 || Dir == 315 || (onIce &amp;&amp; dirSlip == 0)) {
+        if (!place_meeting(x + moveSpeed, y, oWall))
+            x += moveSpeed;
+        else
+            moveContactWith(0, moveSpeed, oWall);
+        dirSlip = 0;
+        myDirection = Right;
+    }
+    if (Dir == 90 || Dir == 45 || Dir == 135 || (onIce &amp;&amp; dirSlip == 90)) {
+        if (!place_meeting(x, y - moveSpeed, oWall))
+            y -= moveSpeed;
+        else
+            moveContactWith(90, moveSpeed, oWall);
+        dirSlip = 90;
+        myDirection = Up;
+    }
+    if (Dir == 225 || Dir == 270 || Dir == 315 || (onIce &amp;&amp; dirSlip == 270)) {
+        if (!place_meeting(x, y + moveSpeed, oWall))
+            y += moveSpeed;
+        else
+            moveContactWith(270, moveSpeed, oWall);
+        dirSlip = 270;
+        myDirection = Down;
+    }
+    moveSpeed = MoveSpeed;
+    onIce = false;
 </string>
           </argument>
         </arguments>

@@ -19,6 +19,7 @@
     <script>scripts\inputJump.gml</script>
     <script>scripts\input360.gml</script>
     <script>scripts\loadControls.gml</script>
+    <script>scripts\script7.gml</script>
   </scripts>
   <objects name="objects">
     <object>objects\oPlayer</object>
