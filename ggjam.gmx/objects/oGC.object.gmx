@@ -34,7 +34,7 @@ if(os_type == os_android) {
     gpDevice = 0;
 }
 
-visibleMode = MODE_LIGHT;
+visibleMode = MODE_DARK;
 
 grid = mp_grid_create(16, 16, room_width /32, room_height /32, 32, 32);
 
@@ -135,7 +135,7 @@ if visibleMode == MODE_LIGHT {
     instance_deactivate_object(parLightSolid);
     instance_activate_object(parDark);
     instance_activate_object(parDarkSolid);
-    if (gridInitialized)
+    if (!gridInitialized)
     {
         mp_grid_clear_all(grid);
         mp_grid_add_instances(grid, parWall, 1);
