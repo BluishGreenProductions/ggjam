@@ -1,5 +1,6 @@
 ///moveContactWith(dir, max_dist, object)
 {
+show_debug_message("move");
     var dirn, max_dist, contact_obj, dx, dy;
 
     dirn        = argument0;

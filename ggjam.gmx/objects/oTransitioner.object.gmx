@@ -53,9 +53,10 @@ size = 0;
             <string>if transitioning and fade == -1 {
     draw_set_color(c_white);
     draw_circle(x, y, size, false);
-    size = lerp(size, room_width * 2, 0.04);
+    size = lerp(size, room_width * 2, 0.04);    
     if(size &gt;= room_width) {
         oGC.visibleMode = !oGC.visibleMode;
+    
         size = 0;
         transitioning = false;
         fade = 1;

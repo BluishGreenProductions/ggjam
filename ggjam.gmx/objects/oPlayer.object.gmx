@@ -103,8 +103,9 @@ transitioning = false;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if keyboard_check(vk_space) {
+            <string>if keyboard_check_released(vk_space) {
     other.transitioning = true;
+    oGC.clearGrid = true;
 }
 </string>
           </argument>

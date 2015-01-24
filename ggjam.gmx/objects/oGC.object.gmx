@@ -34,34 +34,12 @@ if(os_type == os_android) {
     gpDevice = 0;
 }
 
-visibleMode = MODE_DARK;
+visibleMode = MODE_LIGHT;
 
 grid = mp_grid_create(0, 0, room_width /32, room_height /32, 32, 32);
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="2" enumb="1">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>/// A* path computation
-mp_grid_clear_all(grid);
-mp_grid_add_instances(grid, parWall, false);
+
+clearGrid = true;
+
 </string>
           </argument>
         </arguments>
@@ -102,7 +80,7 @@ mp_grid_add_instances(grid, parWall, false);
         </arguments>
       </action>
     </event>
-    <event eventtype="3" enumb="0">
+    <event eventtype="8" enumb="73">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -119,39 +97,30 @@ mp_grid_add_instances(grid, parWall, false);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if visibleMode == MODE_DARK {
-    instance_deactivate_object(parDark);
-    instance_activate_object(parLight);
-}
+            <string>if (clearGrid)
+{
+    mp_grid_clear_all(oGC.grid);
 
-if visibleMode == MODE_LIGHT {
-    instance_activate_object(parDark);
-    instance_deactivate_object(parLight);
-}
+    if visibleMode == MODE_LIGHT {
+        instance_deactivate_object(parDark);
+        instance_activate_object(parLight);
+        show_debug_message("change to light");        
+    }
+    else if visibleMode == MODE_DARK {
+        instance_deactivate_object(parLight);
+        instance_activate_object(parDark);
+        show_debug_message("change to dark");        
+    }
 
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="7" enumb="4">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>alarm[1] = room_speed;
+    mp_grid_add_instances(oGC.grid, parWall, true);    
+    //clearGrid = false;
+
+}    
+/*draw_set_alpha(0.3);
+mp_grid_draw(oGC.grid);
+draw_set_alpha(1);*/
+
+show_debug_message(visibleMode);
 </string>
           </argument>
         </arguments>
