@@ -10,6 +10,7 @@
     <sprite>sprites\sTransitioner</sprite>
     <sprite>sprites\sDarkWall</sprite>
     <sprite>sprites\sLightWall</sprite>
+    <sprite>sprites\sEnemy</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -32,6 +33,7 @@
     <object>objects\parLight</object>
     <object>objects\oWallDark</object>
     <object>objects\oWallLight</object>
+    <object>objects\oEnemy</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room1</room>

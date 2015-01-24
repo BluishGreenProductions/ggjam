@@ -54,7 +54,7 @@
     <instance objName="oGC" x="224" y="128" name="inst_B304D23C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="oPlayer" x="704" y="384" name="inst_6626F62F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="oWallDark" x="160" y="288" name="inst_A544E135" locked="0" code="" scaleX="19" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="oWallDark" x="160" y="320" name="inst_B272F779" locked="0" code="" scaleX="1" scaleY="5" colour="4294967295" rotation="0"/>
+    <instance objName="oPlayer" x="416" y="640" name="inst_453917CD" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="oWallDark" x="192" y="448" name="inst_BB995112" locked="0" code="" scaleX="18" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="oWallDark" x="768" y="320" name="inst_A93E4106" locked="0" code="" scaleX="1" scaleY="4" colour="4294967295" rotation="0"/>
     <instance objName="oWallDark" x="640" y="320" name="inst_A949D952" locked="0" code="" scaleX="1" scaleY="4" colour="4294967295" rotation="0"/>
@@ -64,8 +64,9 @@
     <instance objName="oTransitioner" x="224" y="384" name="inst_FD52C9D8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="oWallLight" x="96" y="288" name="inst_AA591324" locked="0" code="" scaleX="23" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="oWallLight" x="768" y="256" name="inst_8CD58C81" locked="0" code="" scaleX="1" scaleY="8" colour="4294967295" rotation="0"/>
-    <instance objName="oWallLight" x="160" y="256" name="inst_33B7EAA1" locked="0" code="" scaleX="1" scaleY="8" colour="4294967295" rotation="0"/>
+    <instance objName="oPlayer" x="288" y="640" name="inst_70F0A1AF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="oWallLight" x="96" y="448" name="inst_AA21FFA7" locked="0" code="" scaleX="25" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="oEnemy" x="384" y="160" name="inst_BAE9A0B9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>
