@@ -25,8 +25,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>x = xstart - oGC.x_offset;
-y = ystart - oGC.y_offset;
+            <string>x -= oGC.x_offset;
+y -= oGC.y_offset;
 
 x = ((x % room_width) + room_width) % room_width; // the sexiest wrapping code ever
 y = ((y % room_height) + room_height) % room_height;
