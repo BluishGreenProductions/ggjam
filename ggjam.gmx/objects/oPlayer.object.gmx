@@ -28,6 +28,7 @@
             <string>moveSpeed = 5;
 onIce = false;
 transitioning = false;
+ang = 0;
 </string>
           </argument>
         </arguments>
@@ -51,36 +52,58 @@ transitioning = false;
           <argument>
             <kind>1</kind>
             <string>var Dir = input360();
-    //Movement
-    if (Dir == 180 || Dir == 135 || Dir == 225 || (onIce &amp;&amp; dirSlip == 180)) {
-        if (!place_meeting(x - moveSpeed, y, parWall))
-            x -= moveSpeed;
-        else
-            moveContactWith(180, moveSpeed, parWall);
-        dirSlip = 180;
-    }
-    if (Dir == 45 || Dir == 0 || Dir == 315 || (onIce &amp;&amp; dirSlip == 0)) {
-        if (!place_meeting(x + moveSpeed, y, parWall))
-            x += moveSpeed;
-        else
-            moveContactWith(0, moveSpeed, parWall);
-        dirSlip = 0;
-    }
-    if (Dir == 90 || Dir == 45 || Dir == 135 || (onIce &amp;&amp; dirSlip == 90)) {
-        if (!place_meeting(x, y - moveSpeed, parWall))
-            y -= moveSpeed;
-        else
-            moveContactWith(90, moveSpeed, parWall);
-        dirSlip = 90;
-    }
-    if (Dir == 225 || Dir == 270 || Dir == 315 || (onIce &amp;&amp; dirSlip == 270)) {
-        if (!place_meeting(x, y + moveSpeed, parWall))
-            y += moveSpeed;
-        else
-            moveContactWith(270, moveSpeed, parWall);
-        dirSlip = 270;
-    }
-    onIce = false;
+//Movement
+if (Dir == 180 || Dir == 135 || Dir == 225 || (onIce &amp;&amp; dirSlip == 180)) {
+    if (!place_meeting(x - moveSpeed, y, parWall))
+        x -= moveSpeed;
+    else
+        moveContactWith(180, moveSpeed, parWall);
+    dirSlip = 180;
+}
+if (Dir == 45 || Dir == 0 || Dir == 315 || (onIce &amp;&amp; dirSlip == 0)) {
+    if (!place_meeting(x + moveSpeed, y, parWall))
+        x += moveSpeed;
+    else
+        moveContactWith(0, moveSpeed, parWall);
+    dirSlip = 0;
+}
+if (Dir == 90 || Dir == 45 || Dir == 135 || (onIce &amp;&amp; dirSlip == 90)) {
+    if (!place_meeting(x, y - moveSpeed, parWall))
+        y -= moveSpeed;
+    else
+        moveContactWith(90, moveSpeed, parWall);
+    dirSlip = 90;
+}
+if (Dir == 225 || Dir == 270 || Dir == 315 || (onIce &amp;&amp; dirSlip == 270)) {
+    if (!place_meeting(x, y + moveSpeed, parWall))
+        y += moveSpeed;
+    else
+        moveContactWith(270, moveSpeed, parWall);
+    dirSlip = 270;
+}
+onIce = false;
+    
+
+// Animation
+
+if Dir != -1 {
+    ang = Dir;
+}
+image_speed = (Dir != -1) * 0.5;
+
+
+// wrap at edges smoothly
+if x &gt; room_width - view_wview[0] / 2 {
+    x = view_wview[0] / 2 + 16;
+} else if x &lt; view_wview[0] / 2 {
+    x = room_width - view_wview[0]/2 - 16;
+}
+
+if y &gt; room_height - view_hview[0]/2 {
+    y = view_hview[0]/2 + 16;
+} else if y &lt; view_hview[0]/2 {
+    y = room_height - view_hview[0]/2 - 16;
+}
 </string>
           </argument>
         </arguments>
@@ -133,7 +156,7 @@ transitioning = false;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_self();
+            <string>draw_sprite_ext(sprite_index,image_index,x,y,image_xscale,image_yscale,ang,image_blend,image_alpha);
 draw_set_alpha(0.1);
 mp_grid_draw(oGC.grid);
 draw_set_alpha(1);
