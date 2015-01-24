@@ -50,8 +50,8 @@ transitioning = false;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>hspeed = (keyboard_check(vk_right) - keyboard_check(vk_left)) * move_speed;
-vspeed = (keyboard_check(vk_down) - keyboard_check(vk_up)) * move_speed;
+            <string>hspeed = (inputLeft() - inputRight()) * move_speed;
+vspeed = (inputDown() - inputUp()) * move_speed;
 </string>
           </argument>
         </arguments>
