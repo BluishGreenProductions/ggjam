@@ -31,7 +31,9 @@
     <object>objects\oGC</object>
     <object>objects\parWall</object>
     <object>objects\parDark</object>
+    <object>objects\parDarkSolid</object>
     <object>objects\parLight</object>
+    <object>objects\parLightSolid</object>
     <object>objects\oWallDark</object>
     <object>objects\oWallLight</object>
     <object>objects\oExit</object>

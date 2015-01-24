@@ -33,7 +33,7 @@ size = 0;
         </arguments>
       </action>
     </event>
-    <event eventtype="3" enumb="0">
+    <event eventtype="8" enumb="0">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -50,13 +50,13 @@ size = 0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if transitioning and fade == -1 {
+            <string>draw_self();
+if transitioning and fade == -1 {
     draw_set_color(c_white);
     draw_circle(x, y, size, false);
     size = lerp(size, room_width * 2, 0.04);    
     if(size &gt;= room_width) {
         oGC.visibleMode = !oGC.visibleMode;
-    
         size = 0;
         transitioning = false;
         fade = 1;
@@ -72,8 +72,6 @@ if fade &gt; 0 {
 } else if fade == 0 {
     fade = -1; // done
 }
-
-draw_self();
 </string>
           </argument>
         </arguments>

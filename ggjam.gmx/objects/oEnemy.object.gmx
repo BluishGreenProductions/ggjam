@@ -29,8 +29,6 @@
 
 oldPlayerX = oPlayer.x;
 oldPlayerY = oPlayer.y;
-
-
 </string>
           </argument>
         </arguments>
@@ -55,8 +53,7 @@ oldPlayerY = oPlayer.y;
             <kind>1</kind>
             <string>//has the character moved?  if so, chase!
 if (abs(oPlayer.x - oldPlayerX) &gt; 20 
-|| abs(oPlayer.y - oldPlayerY) &gt; 20
-|| oGC.clearGrid)
+|| abs(oPlayer.y - oldPlayerY) &gt; 20)
 {
     oldPlayerX = oPlayer.x;
     oldPlayerY = oPlayer.y;
@@ -69,6 +66,30 @@ if (abs(oPlayer.x - oldPlayerX) &gt; 20
     }
     
 }
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="8" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>draw_self();
+draw_path(path, x, y, true);
 </string>
           </argument>
         </arguments>
