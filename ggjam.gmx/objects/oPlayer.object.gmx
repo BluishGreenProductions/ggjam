@@ -71,6 +71,7 @@ transitioning = false;
             y -= moveSpeed;
         else
             moveContactWith(90, moveSpeed, parWall);
+        dirSlip = 90;
     }
     if (Dir == 225 || Dir == 270 || Dir == 315 || (onIce &amp;&amp; dirSlip == 270)) {
         if (!place_meeting(x, y + moveSpeed, parWall))
@@ -80,29 +81,6 @@ transitioning = false;
         dirSlip = 270;
     }
     onIce = false;
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="4" ename="parWall">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>moveContactWith(direction, 1, other);
 </string>
           </argument>
         </arguments>
@@ -126,6 +104,29 @@ transitioning = false;
           <argument>
             <kind>1</kind>
             <string>other.transitioning = true;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="9" enumb="32">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>oGC.visibleMode = !oGC.visibleMode;
 </string>
           </argument>
         </arguments>

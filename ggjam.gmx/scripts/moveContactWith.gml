@@ -16,7 +16,8 @@
       
     while( dist <= max_dist )
     { 
-        if( place_meeting( x + dx, y + dy, contact_obj ))
+        var i = instance_place( x + dx, y + dy, contact_obj );
+        if( i != noone and i.visible)
             return true;
         x = x + dx;
         y = y + dy;

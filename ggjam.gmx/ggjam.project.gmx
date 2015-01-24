@@ -34,7 +34,7 @@
     <object>objects\oWallLight</object>
   </objects>
   <rooms name="rooms">
-    <room>rooms\rmtest</room>
+    <room>rooms\room1</room>
   </rooms>
   <constants number="6">
     <constant name="MODE_DARK">1</constant>

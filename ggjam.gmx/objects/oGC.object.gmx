@@ -3,7 +3,7 @@
   <spriteName>&lt;undefined&gt;</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>10</depth>
+  <depth>0</depth>
   <persistent>-1</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -75,60 +75,7 @@ visibleMode = MODE_LIGHT;
         </arguments>
       </action>
     </event>
-    <event eventtype="7" enumb="4">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>lightSurface = surface_create(room_width, room_height);
-darkSurface = surface_create(room_width, room_height);
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="8" enumb="76">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>surface_set_target(lightSurface);
-draw_clear_alpha(c_black, 0);
-
-surface_set_target(darkSurface);
-draw_clear_alpha(c_black, 0);
-
-surface_reset_target();
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="8" enumb="0">
+    <event eventtype="3" enumb="0">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -146,9 +93,13 @@ surface_reset_target();
           <argument>
             <kind>1</kind>
             <string>if visibleMode == MODE_DARK {
-    draw_surface(darkSurface, 0, 0);
-} else if visibleMode == MODE_LIGHT {
-    draw_surface(lightSurface, 0, 0);
+    instance_deactivate_object(parDark);
+    instance_activate_object(parLight);
+}
+
+if visibleMode == MODE_LIGHT {
+    instance_activate_object(parDark);
+    instance_activate_object(parLight);
 }
 </string>
           </argument>
