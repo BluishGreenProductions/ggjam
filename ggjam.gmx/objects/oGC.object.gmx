@@ -40,6 +40,8 @@ grid = mp_grid_create(16, 16, room_width /32, room_height /32, 32, 32);
 
 gridInitialized = false;
 alarm[1] = 1;
+x_offset = 0;
+y_offset = 0;
 </string>
           </argument>
         </arguments>
