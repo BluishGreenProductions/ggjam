@@ -8,6 +8,8 @@
   <sprites name="sprites">
     <sprite>sprites\sPlayer</sprite>
     <sprite>sprites\sTransitioner</sprite>
+    <sprite>sprites\sDarkWall</sprite>
+    <sprite>sprites\sLightWall</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -28,12 +30,15 @@
     <object>objects\parWall</object>
     <object>objects\parDark</object>
     <object>objects\parLight</object>
+    <object>objects\oWallDark</object>
+    <object>objects\oWallLight</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rmtest</room>
-    <room>rooms\rmtest</room>
   </rooms>
-  <constants number="4">
+  <constants number="6">
+    <constant name="MODE_DARK">1</constant>
+    <constant name="MODE_LIGHT">0</constant>
     <constant name="Unmapped">-1</constant>
     <constant name="TypePC">0</constant>
     <constant name="TypeJoystick">2</constant>
